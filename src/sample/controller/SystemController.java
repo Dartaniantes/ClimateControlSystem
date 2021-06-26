@@ -1,4 +1,4 @@
-package sample;
+package sample.controller;
 
 import sample.model.HumidityController;
 import sample.model.TemperatureController;
@@ -15,10 +15,6 @@ public class SystemController {
     public int getTemperature() {
         return tempCont.getTemperature();
     }
-    /*
-
-
-    * */
 
     public void setTemperature(int temperature) {
         tempCont.setTemperature(temperature);

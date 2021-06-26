@@ -17,7 +17,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import sample.SystemController;
+import sample.controller.SystemController;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -167,14 +167,16 @@ public class Controller extends SystemController {
     }
 
     public static void main(String[] args) {
-        ClimateControlSystemApp.launch(args);
+        Application.launch(ClimateControlSystemApp.class,args);
     }
+    public static class ClimateControlSystemApp extends Application {
 
-    class ClimateControlSystemApp extends Application {
+
+        //        --module-path ${JavaFXLibPath} --add-modules javafx.controls,javafx.fxml
         @Override
         public void start(Stage stage) throws Exception {
-            setView();
+            Controller c = new Controller();
+            c.setView();
         }
     }
-
 }
